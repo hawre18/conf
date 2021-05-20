@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Http\Controllers\Frontend;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+class SearchController extends Controller
+{
+    public function fetch(Request $request)
+    {
+        $qry=$request->qry;
+        return $products=DB::table('products')->where('title','like','%'.$qry.'%')->get();
+
+    }
+}
