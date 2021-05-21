@@ -19,7 +19,7 @@ class Category extends Model
         return $this->belongsToMany(AttributeGroup::class,'attributegroup_category','category_id','attributeGroup_id');
     }
     public function brands(){
-        return $this->belongsToMany(Brand::class,'brand_category','category_id','brand_id');
+        return $this->belongsToMany(Brand::class,'brand_category','category_id','attributeGroup_id');
     }
     public function products(){
         return $this->belongsToMany(Product::class);
@@ -27,4 +27,5 @@ class Category extends Model
     public function varietes(){
         return $this->belongsToMany(Variety::class);
     }
+
 }

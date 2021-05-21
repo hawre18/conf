@@ -37,7 +37,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            'root' => '/home2/sensorba/test.sensorbaba.com/public_html/storage',
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Brand;
+use App\Models\News;
 use App\Models\Product;
 use App\Models\Slide;
 use Illuminate\Http\Request;
@@ -13,10 +14,12 @@ class HomeController extends Controller
     public function index()
     {
         $count=0;
+        $counter=0;
         $slides=Slide::with(['photos'])->where('status','active')->get();
         $products=Product::with(['photos'])->orderby('created_at','desc')->get();
         $brands=Brand::with('photo')->get();
-        return view('frontend.home.index',compact(['products','brands','slides','count']));
+        $newses=News::with('photo')->get();
+        return view('frontend.home.index',compact(['products','brands','slides','count','newses']));
     }
     public function profile()
     {

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <!--Left Part Start -->
         <aside id="column-left" class="col-sm-3 hidden-xs">
             <h3 class="subtitle">فیلتر</h3>
             <div class="box-category">

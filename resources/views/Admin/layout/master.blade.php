@@ -124,16 +124,17 @@
                             <li><a href="{{route('products.index')}}"><i class="fa fa-circle-o"></i>لیست محصولات</a></li>
                         </ul>
                     </li>
-                    <li class="treeview">
+                    <li class="active treeview">
                         <a href="#">
-                            <i class="fa fa-database"></i>
-                            <span>دسته بندی ها</span>
-                            <i class="fa fa-angle-left pull-right"></i>
+                            <i class="fa fa-newspaper-o"></i> <span>اخبار</span> <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="{{route('categories.index')}}"><i class="fa fa-circle-o"></i>لیست دسته بندی ها</a></li>
+                            <li><a href="{{route('news.index')}}"><i class="fa fa-circle-o"></i>لیست اخبار</a></li>
                         </ul>
                     </li>
+                    <ul class="treeview-menu">
+                        <li><a href="{{route('categories.index')}}"><i class="fa fa-circle-o"></i>لیست دسته بندی ها</a></li>
+                    </ul>
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-database"></i>

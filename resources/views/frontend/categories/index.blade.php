@@ -2,8 +2,8 @@
 
 
 @section('content')
-    <div class="container">
-        <div class="row">
+    <div >
+        <div >
             <product-component :category="{{$category}}"></product-component>
         </div>
     </div>

@@ -64,14 +64,20 @@
         </div>
     </div>
     <div class="text-center mt-5">
-        <h4>News</h4>
+        <h4>اخبار</h4>
     </div>
     <div class="container">
         <hr>
     </div>
     <div class="container-fluid mt-5 mb-5">
         <div id="owl-demo" class="owl-carousel owl-theme owl-loaded owl-drag">
-            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1325px, 0px, 0px); transition: all 0.25s ease 0s; width: 5300px;"><div class="owl-item" style="width: 1325px;"><div>
+            <div class="owl-stage-outer">
+                <div class="owl-stage" style="transform: translate3d(-1325px, 0px, 0px); transition: all 0.25s ease 0s; width: 5300px;">
+                    @foreach($newses as $news)
+                        @if(($counter+1)==1)
+                            <span class="hidden">{{$counter+=1}}</span>
+                    <div class="owl-item active" style="width: 1325px;">
+                        <div>
                             <div class="row align-items-center slider-section-4">
                                 <div class="col-12 col-lg-5">
                                     <div class="left-sction-slider">
@@ -80,14 +86,10 @@
                                                 <i class="fas fa-video camera-icon"></i>
                                             </div>
                                             <h2 class="slider-title">
-                                                Lorem ipsum <br>
-                                                dolor sit amet.
+                                                {{$news->title}}
                                             </h2>
                                             <p class="lightgray-color self-description">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Numquam, at amet voluptatem aut quas eos magni
-                                                asperiores sequi quo, possimus modi, dignissimos quos.
-                                                Incidunt animi veritatis cumque dolore pariatur omnis.
+                                                {!! $news->description !!}
                                             </p>
                                             <a href="" class="btn btn-secondary">بیشتر</a>
                                         </div>
@@ -95,101 +97,56 @@
                                 </div>
                                 <div class="col-12 col-lg-7">
                                     <div>
-                                        <img src="images/section-4-slider-img/Screenshot (310).png" alt="slider img" class="section-4-slider-img">
+                                        <img src="{{$news->photo->path}}" alt="slider img" class="section-4-slider-img">
                                     </div>
                                 </div>
                             </div>
-                        </div></div><div class="owl-item active" style="width: 1325px;"><div>
-                            <div class="row align-items-center slider-section-4">
-                                <div class="col-12 col-lg-5">
-                                    <div class="left-sction-slider">
-                                        <div class="description-slider">
-                                            <div class="slider-image-icon-container">
-                                                <i class="fas fa-video camera-icon"></i>
+                        </div>
+                    </div>
+                        @else
+                            <div class="owl-item " style="width: 1325px;">
+                                <div>
+                                    <div class="row align-items-center slider-section-4">
+                                        <div class="col-12 col-lg-5">
+                                            <div class="left-sction-slider">
+                                                <div class="description-slider">
+                                                    <div class="slider-image-icon-container">
+                                                        <i class="fas fa-video camera-icon"></i>
+                                                    </div>
+                                                    <h2 class="slider-title">
+                                                        {{$news->title}}
+                                                    </h2>
+                                                    <p class="lightgray-color self-description">
+                                                        {!! $news->description !!}
+                                                    </p>
+                                                    <a href="" class="btn btn-secondary">بیشتر</a>
+                                                </div>
                                             </div>
-                                            <h2 class="slider-title">
-                                                Lorem ipsum <br>
-                                                dolor sit amet.
-                                            </h2>
-                                            <p class="lightgray-color self-description">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Numquam, at amet voluptatem aut quas eos magni
-                                                asperiores sequi quo, possimus modi, dignissimos quos.
-                                                Incidunt animi veritatis cumque dolore pariatur omnis.
-                                            </p>
-                                            <a href="" class="btn btn-secondary">بیشتر</a>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-7">
-                                    <div>
-                                        <img src="images/section-4-slider-img/Screenshot (310).png" alt="slider img" class="section-4-slider-img">
-                                    </div>
-                                </div>
-                            </div>
-                        </div></div><div class="owl-item" style="width: 1325px;"><div>
-                            <div class="row align-items-center slider-section-4">
-                                <div class="col-12 col-lg-5">
-                                    <div class="left-sction-slider">
-                                        <div class="description-slider">
-                                            <div class="slider-image-icon-container">
-                                                <i class="fas fa-video camera-icon"></i>
+                                        <div class="col-12 col-lg-7">
+                                            <div>
+                                                <img src="{{$news->photo->path}}" alt="slider img" class="section-4-slider-img">
                                             </div>
-                                            <h2 class="slider-title">
-                                                Lorem ipsum <br>
-                                                dolor sit amet.
-                                            </h2>
-                                            <p class="lightgray-color self-description">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Numquam, at amet voluptatem aut quas eos magni
-                                                asperiores sequi quo, possimus modi, dignissimos quos.
-                                                Incidunt animi veritatis cumque dolore pariatur omnis.
-                                            </p>
-                                            <a href="" class="btn btn-secondary">بیشتر</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-7">
-                                    <div>
-                                        <img src="images/section-4-slider-img/Screenshot (310).png" alt="slider img" class="section-4-slider-img">
-                                    </div>
-                                </div>
                             </div>
-                        </div></div><div class="owl-item" style="width: 1325px;"><div>
-                            <div class="row align-items-center slider-section-4">
-                                <div class="col-12 col-lg-5">
-                                    <div class="left-sction-slider">
-                                        <div class="description-slider">
-                                            <div class="slider-image-icon-container">
-                                                <i class="fas fa-video camera-icon"></i>
-                                            </div>
-                                            <h2 class="slider-title">
-                                                Lorem ipsum <br>
-                                                dolor sit amet.
-                                            </h2>
-                                            <p class="lightgray-color self-description">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Numquam, at amet voluptatem aut quas eos magni
-                                                asperiores sequi quo, possimus modi, dignissimos quos.
-                                                Incidunt animi veritatis cumque dolore pariatur omnis.
-                                            </p>
-                                            <a href="" class="btn btn-secondary">بیشتر</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-7">
-                                    <div>
-                                        <img src="images/section-4-slider-img/Screenshot (310).png" alt="slider img" class="section-4-slider-img">
-                                    </div>
-                                </div>
-                            </div>
-                        </div></div></div></div>
-            <div class="owl-nav"><button type="button" role="presentation" class="owl-prev">
-                    <span class="fa fa-angle-left"></span>
-                </button><button type="button" role="presentation" class="owl-next"><span class="fa fa-angle-right"></span></button>
+                        @endif
+                    @endforeach
+                </div>
             </div>
-
-            </button><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot">
+            <div class="owl-nav">
+                <button type="button" role="presentation" class="owl-prev">
+                    <span class="fa fa-angle-left"></span>
+                </button>
+                <button type="button" role="presentation" class="owl-next">
+                    <span class="fa fa-angle-right"></span>
+                </button>
+            </div>
+            <button role="button" class="owl-dot active">
+                <span></span>
+            </button>
+            <button role="button" class="owl-dot">
 
             </button>
         </div>
